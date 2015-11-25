@@ -1,20 +1,9 @@
 <ion-view view-title="List">
   <ion-content class="padding main-list">
 
-    <div ng-if="list === undefined" class="spiner-center">
-      <ion-spinner icon="ios"></ion-spinner>
-    </div>
-
-    <div ng-repeat="item in list" class="list card" ng-click="select(item.id)">
-      <div class="item item-divider">{{::item.title}} <small>({{::item.id}})</small></div>
-      <div class="item item-body">
-        <div class="display-item-body">
-          {{::item.body}}
-        </div>
-      </div>
-    </div>
-
-    <div ng-if="list && list.length == 0">No items to display</div>
+    <h2 class="text-center">Video preview</h2>
+    <video id="self"></video>
+    <video id="peer"></video>
 
   </ion-content>
 </ion-view>

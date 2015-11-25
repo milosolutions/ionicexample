@@ -18,7 +18,7 @@ angular.module('MiloDemo', ['ionic','Communication']).run(function($ionicPlatfor
     views: {
       'app-list': {
         templateUrl: 'templates/list.html',
-        controller: 'ListCtrl'
+        controller: 'WebRtcCtrl'
       }
     }
   })
@@ -39,8 +39,17 @@ angular.module('MiloDemo', ['ionic','Communication']).run(function($ionicPlatfor
           controller: 'ViewCtrl'
         }
       }
+    })
+    .state('app.video', {
+      url: '/video/',
+      views: {
+        'app-video': {
+          templateUrl: 'templates/video.html',
+          controller: 'WebRtcCtrl'
+        }
+      }
     });
-  $urlRouterProvider.otherwise('/app/list');
+  $urlRouterProvider.otherwise('/video/');
 
   /* ... */
 });
