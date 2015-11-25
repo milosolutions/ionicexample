@@ -133,9 +133,9 @@ display item controller
         }, 100);
       };
 
-
+      easyrtc.setSocketUrl('80.51.119.182:8450');
       easyrtc.setVideoDims(640, 480);
       easyrtc.easyApp('vcdemo', 'self', ['peer'], connectSuccess, failureCallback); //connect to easyrtc app; initiate media sources and elements
-      easyrtc.setSocketUrl('80.51.119.182:8450');
+
 
     });
